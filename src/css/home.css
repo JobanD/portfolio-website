@@ -1,0 +1,27 @@
+/* html,
+body,
+.home-container,
+.home-container > div {
+  height: 100%;
+} */
+
+.home-container {
+  display: flex;
+  background-color: blue;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.MuiDivider-flexItem {
+  border-bottom-width: 100px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
