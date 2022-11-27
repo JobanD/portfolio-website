@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 
 export default function Skills() {
   return (
-    <div className="skills-container" id="#skills">
+    <div className="skills-container" id="skills">
       <Typography variant="h2">Skills</Typography>
     </div>
   );
