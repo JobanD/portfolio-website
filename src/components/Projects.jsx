@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 
 export default function Projects() {
   return (
-    <div className="projects-container" id="#projects">
+    <div className="projects-container" id="projects">
       <Typography variant="h2">Projects</Typography>
       <div className="projects-cards-container">
         <ProjectCard

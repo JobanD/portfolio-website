@@ -5,7 +5,7 @@ import "../css/footer.css";
 export default function Footer() {
   return (
     <div className="footer-container">
-      <Typography>Footer</Typography>
+      <Typography>Developed and Designed by Joban Dhindsa</Typography>
     </div>
   );
 }

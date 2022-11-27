@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { IconButton, Avatar, Menu, MenuItem, Tooltip } from "@mui/material/";
+import {
+  IconButton,
+  Avatar,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Link,
+} from "@mui/material/";
 
 export default function AvatarNav() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -47,7 +54,7 @@ export default function AvatarNav() {
               display: "block",
               position: "absolute",
               top: 0,
-              right: 14,
+              left: 30,
               width: 10,
               height: 10,
               bgcolor: "background.paper",
@@ -59,11 +66,20 @@ export default function AvatarNav() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem>
-          <Avatar /> Profile
+        {/* ICONS FOR GITHUB AND LINKED IN FROM icons8 */}
+        <MenuItem
+          component={Link}
+          href="https://github.com/JobanD"
+          target="_blank"
+        >
+          <Avatar src="/src/assets/github.png" alt="GitHub" /> GitHub
         </MenuItem>
-        <MenuItem>
-          <Avatar /> My account
+        <MenuItem
+          component={Link}
+          href="https://www.linkedin.com/in/jobandhindsa/"
+          target="_blank"
+        >
+          <Avatar src="/src/assets/linkedin.png" alt="LinkedIn" /> LinkedIn
         </MenuItem>
       </Menu>
     </div>

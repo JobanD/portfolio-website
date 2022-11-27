@@ -5,6 +5,17 @@ header {
   background-color: blueviolet;
 }
 
+.MuiButton-root {
+  min-width: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    flex-wrap: wrap;
+    min-width: fit-content;
+  }
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
