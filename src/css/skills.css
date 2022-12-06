@@ -1,0 +1,43 @@
+.skills-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 4em;
+  width: 90vw;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .skills-container {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .skills-divider {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.skills-sections-container {
+  display: flex;
+  align-items: center;
+  gap: 15vw;
+  flex-wrap: wrap;
+}
+
+.skills-lists-container {
+  display: flex;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.skills-list > .MuiListItem-root {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}

@@ -3,6 +3,7 @@ header {
   position: sticky;
   top: 0;
   background-color: blueviolet;
+  z-index: 999;
 }
 
 .MuiButton-root {

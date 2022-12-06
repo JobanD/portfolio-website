@@ -12,7 +12,13 @@ import {
 export default function ProjectCard(props) {
   return (
     <div>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card
+        sx={{
+          maxWidth: 345,
+          zIndex: 1,
+          position: "relative",
+        }}
+      >
         <CardActionArea>
           <CardMedia
             component="img"

@@ -10,12 +10,9 @@ export default function Home() {
     <div className="home-container">
       <div className="main-content" id="">
         <div className="main-content-text">
-          <Typography>Hello I'm</Typography>
-          <Typography variant="h1">Joban Dhindsa</Typography>
-          <Typography variant="subtitle1">I am a software developer</Typography>
-          <Typography>
-            Random text about myself. Include things I like what I'm experienced
-            in, what kind of developer I am etc...
+          <Typography variant="h1">Hello I'm Joban Dhindsa</Typography>
+          <Typography variant="subtitle1">
+            I love to code and design things!
           </Typography>
         </div>
         <Paper variant="outlined">
@@ -25,7 +22,9 @@ export default function Home() {
       <Divider flexItem="true" sx={{ borderBottomWidth: 5 }} />
       <Skills />
       <Divider flexItem="true" sx={{ borderBottomWidth: 5 }} />
-      <Projects />
+      <div className="project-main-container">
+        <Projects />
+      </div>
       <Divider flexItem="true" sx={{ borderBottomWidth: 5 }} />
       <Contact />
     </div>

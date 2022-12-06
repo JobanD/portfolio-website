@@ -3,15 +3,21 @@ import { ButtonGroup, Button, Link, Tooltip } from "@mui/material/";
 import { Home, Lightbulb, Build, ContactPage } from "@mui/icons-material";
 import "../css/nav.css";
 import AvatarNav from "./AvatarNav";
-import { useWindowSize } from "../hooks/useWindowSize";
+import MobileNav from "./MobileNav";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function Nav() {
-  const windowSize = useWindowSize();
-  return (
+  const [height, width] = useWindowSize();
+  return width < 600 ? (
+    <MobileNav />
+  ) : (
     <header>
       <div className="nav-container">
         {/* Custom Component: Turns Avatar in navbar into a button with a drop down menu */}
-        {windowSize.width > 600 && <AvatarNav />}
+        <AvatarNav />
+        <>
+          height: {height}, width: {width}
+        </>
         <ButtonGroup variant="contained" className="button-group">
           <Tooltip title="Home">
             <Button size="small" startIcon={<Home />} href="#">
