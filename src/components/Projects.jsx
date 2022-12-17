@@ -10,10 +10,12 @@ export default function Projects() {
       <div className="projects-cards-container">
         <ProjectCard
           imageSource="/src/assets/basketball-stock.jpg"
-          alt="basketball net"
+          alt="Preview image of basketball project website"
           title="Basketball Project"
           description="This project projects future player statistics for any
           basketball player in the NBA"
+          webUrl="http://www.google.com/"
+          githubUrl="http://www.google.com/"
         />
         <ProjectCard
           imageSource="/src/assets/basketball-stock.jpg"
@@ -21,6 +23,8 @@ export default function Projects() {
           title="Basketball Project"
           description="This project projects future player statistics for any
           basketball player in the NBA"
+          webUrl="http://www.google.com/"
+          githubUrl="http://www.google.com/"
         />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, SvgIcon, List, ListItem, Divider } from "@mui/material";
 import "../css/skills.css";
+import Pdf from "../assets/Joban_CV.pdf";
+import { Typography, SvgIcon, List, ListItem, Divider } from "@mui/material";
 import { ReactComponent as CssLogo } from "../assets/icons/css3_logo.svg";
 import { ReactComponent as HtmlLogo } from "../assets/icons/html5_logo.svg";
 import { ReactComponent as JsLogo } from "../assets/icons/javascript_logo.svg";
@@ -19,6 +20,12 @@ export default function Skills() {
             Hello, my name is Joban Dhindsa I am a software developer who
             graduated from the University of Windsor with a Honours Bachelor
             Degree in Business Administration and Computer Science.
+          </Typography>
+          <Typography>
+            Here is a link to my{" "}
+            <a href={Pdf} target="_blank">
+              Resume
+            </a>
           </Typography>
         </div>
       </div>
@@ -84,58 +91,6 @@ export default function Skills() {
                   Accessibility
                 </ListItem>
               </List>
-              {/* <ul>
-                <li className="list-item">
-                  <SvgIcon viewBox="0 0 50 50" fontSize="large">
-                    <JsLogo />
-                  </SvgIcon>
-                  Javascript
-                </li>
-                <li className="list-item">
-                  <SvgIcon fontSize="large">
-                    <HtmlLogo />
-                  </SvgIcon>
-                  HTML5
-                </li>
-                <li className="list-item">
-                  <SvgIcon fontSize="large">
-                    <CssLogo />
-                  </SvgIcon>
-                  CSS3
-                </li>
-                <li className="list-item">
-                  <SvgIcon viewBox="0 0 28 28" fontSize="large">
-                    <ReactLogo />
-                  </SvgIcon>
-                  React
-                </li>
-              </ul>
-              <ul>
-                <li className="list-item">
-                  <SvgIcon viewBox="0 0 28 28" fontSize="large">
-                    <PythonLogo />
-                  </SvgIcon>
-                  Python
-                </li>
-                <li className="list-item">
-                  <SvgIcon viewBox="0 0 50 30" fontSize="large">
-                    <DjangoLogo />
-                  </SvgIcon>
-                  Django
-                </li>
-                <li className="list-item">
-                  <SvgIcon fontSize="large">
-                    <GithubLogo />
-                  </SvgIcon>
-                  Github
-                </li>
-                <li className="list-item">
-                  <SvgIcon fontSize="large">
-                    <CssLogo />
-                  </SvgIcon>
-                  Accessibility
-                </li>
-              </ul> */}
             </div>
           </div>
         </div>
