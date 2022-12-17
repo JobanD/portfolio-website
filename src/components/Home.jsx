@@ -10,14 +10,14 @@ export default function Home() {
     <div className="home-container">
       <div className="main-content" id="">
         <div className="main-content-text">
-          <Typography variant="h1">Hello I'm Joban Dhindsa</Typography>
+          <Typography variant="h1">Joban Dhindsa</Typography>
           <Typography variant="subtitle1">
             I love to code and design things!
           </Typography>
         </div>
-        <Paper variant="outlined">
-          <img src="/src/assets/navProfile.JPG" className="profile-image" />
-        </Paper>
+        <div className="profile-image-container">
+          <img src="/src/assets/headshot.JPEG" className="profile-image" />
+        </div>
       </div>
       <Divider flexItem="true" sx={{ borderBottomWidth: 5 }} />
       <Skills />

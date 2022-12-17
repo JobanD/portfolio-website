@@ -5,23 +5,21 @@
   align-items: center;
   position: relative;
   padding: 0.5rem 0rem;
-  background-color: #fff;
   color: black;
-  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
-}
-
-.brand-name {
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
-  margin-left: 1rem;
+  /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
 }
+
 .navigation-menu {
   margin-left: auto;
 }
 
-.navigation-menu ul {
-  display: none;
+.navigation-menu .nav-menu-items {
+  /* display: none; */
+  transform: translate3d(0, -105vh, 0);
+  transition: all 0.5s ease-in-out;
   padding: 0;
 }
 
@@ -39,10 +37,10 @@
 }
 
 /* Styling on expansion of menu */
-.navigation-menu ul {
+.navigation-menu .nav-menu-items {
   /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
   position: absolute;
-  top: 60px;
+  top: 77px;
   left: 0;
   /* stacks the li tags vertically  */
   flex-direction: column;
@@ -52,22 +50,33 @@
   background-color: white;
   border-top: 1px solid black;
 }
+
+.navigation-menu .nav-menu-items .nav-menu-list ul {
+  display: flex;
+  flex-direction: column;
+}
 .navigation-menu li {
   /* centers link text and strips off margin */
   text-align: center;
   margin: 0;
 }
-.navigation-menu li a {
+.navigation-menu .nav-menu-list li a {
   color: black;
   /* increases the surface area of the anchor tag to span the full width of the menu */
   width: 100%;
   padding: 1.5rem 0;
 }
-.navigation-menu li:hover {
+.navigation-menu .nav-menu-list li:hover {
   background-color: #eee;
 }
-.navigation-menu.expanded ul {
-  display: block;
+
+.navigation-menu.expanded {
+  transition: width 0.7s ease 0.3s, height 0.3s ease;
+}
+.navigation-menu.expanded .nav-menu-items {
+  /* display: block; */
+  transform: translate3d(0, 0, 0);
+  transition: all 0.5s ease-in-out;
 }
 
 .hamburger {
@@ -77,9 +86,9 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #283b8b;
+  background-color: black;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   /* positions the icon to the right and center aligns it vertically */
   position: absolute;
   top: 50%;
@@ -90,4 +99,22 @@
 
 .hamburger:hover {
   background-color: #2642af;
+}
+
+.socialBox {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.socialBox ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aquamarine;
+}
+
+/* Align icons with center of div */
+.socialBox li a div {
+  transform: translateX(50%);
 }

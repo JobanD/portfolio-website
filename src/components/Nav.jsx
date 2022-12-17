@@ -8,7 +8,7 @@ import useWindowSize from "../hooks/useWindowSize";
 
 export default function Nav() {
   const [height, width] = useWindowSize();
-  return width < 600 ? (
+  return width < 60000 ? (
     <MobileNav />
   ) : (
     <header>
