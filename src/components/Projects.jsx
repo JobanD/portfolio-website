@@ -2,6 +2,7 @@ import React from "react";
 import "../css/projects.css";
 import ProjectCard from "./ProjectCard";
 import { Typography } from "@mui/material";
+import { Link } from "react-scroll";
 
 export default function Projects() {
   return (

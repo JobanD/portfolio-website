@@ -5,6 +5,7 @@
   justify-content: center;
   height: max-content;
   width: 100%;
+  /* cursor: none; */
 }
 
 .main-content {
@@ -36,5 +37,168 @@
 
 .profile-image-container .profile-image {
   display: inline-block;
-  box-shadow: -30px 30px 0 rgba(75, 75, 75, 0.4);
+  /* box-shadow: -30px 30px 0 rgba(75, 75, 75, 0.4); */
+  box-shadow: -30px 30px 0 var(--main-charcoal-color);
+}
+
+/* CURSOR */
+/* 
+#cursor {
+  background-color: black;
+  border-radius: 25px;
+  z-index: 9;
+
+  height: 25px;
+  width: 25px;
+
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 25px;
+  bottom: 25px;
+
+  filter: invert(1);
+  mix-blend-mode: exclusion;
+} */
+
+#tip {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  padding: 5px 10px;
+
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* SCROLLING */
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-bottom {
+  animation: fade-bottom 0.5s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 0.5s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 0.5s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* WAVES between sections */
+
+.wave {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 65px;
+}
+
+.wave .shape-fill {
+  fill: var(--main-charcoal-color);
+}
+
+.wave-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-main svg {
+  position: relative;
+  display: block;
+  width: calc(209% + 1.3px);
+  height: 147px;
+  transform: rotateY(180deg);
+}
+
+.wave-main .shape-fill {
+  fill: var(--main-charcoal-color);
+}
+
+.wave-projects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-projects svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 91px;
+  transform: rotateY(180deg);
+}
+
+.wave-projects .shape-fill {
+  fill: var(--main-cream-color);
 }

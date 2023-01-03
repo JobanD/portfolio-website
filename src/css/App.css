@@ -1,6 +1,11 @@
 :root {
-  background-color: #ffe6bb;
+  background-color: var(--main-cream-color);
   box-sizing: border-box;
+  --main-orange-color: #ff7400;
+  --main-cream-color: #f2e29f;
+  --main-charcoal-color: #2e4057;
+  --main-brown-color: #591f0a;
+  --main-purple-color: #ae8ca3;
 }
 
 html,
