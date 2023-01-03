@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/mobileNav.css";
 import Pdf from "../assets/Joban_CV.pdf";
 import { SvgIcon, Typography, Avatar } from "@mui/material";
+import { Link } from "react-scroll";
 
 export default function MobileNav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -38,31 +39,80 @@ export default function MobileNav() {
           <div className="nav-menu-items">
             <ul className="nav-menu-list">
               <li>
-                <a href="#" onClick={handleClick}>
+                <Link
+                  activeClass="active"
+                  onClick={handleClick}
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={100}
+                >
                   <Typography variant="h4">Home</Typography>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#skills" onClick={handleClick}>
+                <Link
+                  activeClass="active"
+                  onClick={handleClick}
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={100}
+                >
+                  <Typography variant="h4">About</Typography>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  activeClass="active"
+                  onClick={handleClick}
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={100}
+                >
                   <Typography variant="h4">Skills</Typography>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#projects" onClick={handleClick}>
+                <Link
+                  activeClass="active"
+                  onClick={handleClick}
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={100}
+                >
                   <Typography variant="h4">Projects</Typography>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" onClick={handleClick}>
+                <Link
+                  activeClass="active"
+                  onClick={handleClick}
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={100}
+                >
                   <Typography variant="h4">Contact</Typography>
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="socialBox">
               <ul>
                 <li>
                   <a href="https://github.com/JobanD" target="_blank">
-                    <Avatar src="/src/assets/github.png" alt="GitHub" />
+                    <Avatar
+                      src="/src/assets/github.png"
+                      alt="GitHub"
+                      sx={{ bgcolor: "white" }}
+                    />
                     Github
                   </a>
                 </li>
@@ -71,13 +121,21 @@ export default function MobileNav() {
                     href="https://www.linkedin.com/in/jobandhindsa/"
                     target="_blank"
                   >
-                    <Avatar src="/src/assets/linkedin.png" alt="LinkedIn" />
+                    <Avatar
+                      src="/src/assets/linkedin.png"
+                      alt="LinkedIn"
+                      sx={{ bgcolor: "white" }}
+                    />
                     LinkedIn
                   </a>
                 </li>
                 <li>
                   <a href={Pdf} target="_blank">
-                    <Avatar src="/src/assets/resume.png" alt="Resume" />
+                    <Avatar
+                      src="/src/assets/resume.png"
+                      alt="Resume"
+                      sx={{ bgcolor: "white" }}
+                    />
                     Resume
                   </a>
                 </li>
