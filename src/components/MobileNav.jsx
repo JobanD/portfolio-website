@@ -97,7 +97,7 @@ export default function MobileNav() {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-200}
+                  offset={0}
                   duration={100}
                 >
                   <Typography variant="h4">Contact</Typography>
@@ -112,6 +112,7 @@ export default function MobileNav() {
                       src="/src/assets/github.png"
                       alt="GitHub"
                       sx={{ bgcolor: "white" }}
+                      className="github-avatar"
                     />
                     Github
                   </a>
@@ -125,6 +126,7 @@ export default function MobileNav() {
                       src="/src/assets/linkedin.png"
                       alt="LinkedIn"
                       sx={{ bgcolor: "white" }}
+                      className="linkedin-avatar"
                     />
                     LinkedIn
                   </a>
@@ -135,6 +137,7 @@ export default function MobileNav() {
                       src="/src/assets/resume.png"
                       alt="Resume"
                       sx={{ bgcolor: "white" }}
+                      className="resume-avatar"
                     />
                     Resume
                   </a>

@@ -3,6 +3,7 @@
   padding: 100px;
   background-color: var(--main-charcoal-color);
   width: 100vw;
+  max-width: var(--max-width);
   color: #fff7eaf0;
 }
 
