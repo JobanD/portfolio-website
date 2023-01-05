@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/home.css";
 import { Typography, Divider, Paper } from "@mui/material";
+import { Link } from "react-scroll";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -41,13 +42,30 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <div id="cursor"></div>
-      <div id="tip"></div>
+      {/* <div id="cursor"></div>
+      <div id="tip"></div> */}
       <div className="main-content" id="home">
         <div className="main-content-text">
-          <Typography variant="h1">Joban Dhindsa</Typography>
-          <Typography variant="subtitle1">
-            I love to code and design things!
+          <Typography variant="h3" className="name-text">
+            Hello, my name is Joban Dhindsa
+          </Typography>
+          <Typography variant="h1" className="title-text">
+            Software Developer
+          </Typography>
+          <Typography variant="subtitle1" className="main-content-text-body">
+            I love to code and design things! I am always eager to learn more
+            and expand my skillset. Please navigate the website to learn more{" "}
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={300}
+              className="about-me-main"
+            >
+              About Me
+            </Link>
           </Typography>
         </div>
         <div className="profile-image-container">
@@ -77,9 +95,9 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <section className="reveal fade-left">
+      <section className="reveal fade-bottom">
         <About />
-        <div className="wave">
+        <div className="wave-about">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +130,6 @@ export default function Home() {
         </div>
         <Projects />
       </section>
-      <Divider flexItem="true" sx={{ borderBottomWidth: 5 }} />
       <section className="reveal fade-right">
         <Contact />
       </section>
