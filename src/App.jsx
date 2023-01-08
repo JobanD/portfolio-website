@@ -3,10 +3,10 @@ import "./css/App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
 
 export default function App() {
-  const theme = createTheme({
+  let theme = createTheme({
     typography: {
       fontFamily: [
         "Merriweather",
@@ -25,6 +25,8 @@ export default function App() {
       ].join(","),
     },
   });
+
+  theme = responsiveFontSizes(theme);
 
   return (
     <ThemeProvider theme={theme}>
