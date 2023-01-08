@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/skills.css";
 import { Typography, SvgIcon, List, ListItem, Divider } from "@mui/material";
-import { ReactComponent as CssLogo } from "../assets/icons/css3_logo.svg";
+import { ReactComponent as CssLogo } from "../assets/icons/Css3_logo.svg";
 import { ReactComponent as HtmlLogo } from "../assets/icons/html5_logo.svg";
 import { ReactComponent as JsLogo } from "../assets/icons/javascript_logo.svg";
 import { ReactComponent as ReactLogo } from "../assets/icons/react_logo.svg";
