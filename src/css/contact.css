@@ -5,9 +5,19 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100vw;
   max-width: var(--max-width);
+}
+
+.contact-container a {
+  text-decoration: none;
+}
+
+.contact-container a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .contact-blurb {
@@ -35,7 +45,7 @@
 }
 
 .contact-socials li a:hover > .avatar {
-  background-color: white;
+  background-color: var(--main-purple-color);
 }
 
 .contact-socials .github-avatar {

@@ -10,18 +10,19 @@
   flex-wrap: wrap;
 }
 
-a {
+.about-me-container a {
   text-decoration: none;
-  color: var(--main-purple-color);
+  color: var(--main-orange-color);
 }
 
-a:hover {
+.about-me-container a:hover {
+  cursor: pointer;
   text-decoration: underline;
   color: #fff7eaf0;
 }
 
 .about-me-description {
   padding-top: 3rem;
-  width: 70rem;
+  width: 70%;
   overflow-wrap: normal;
 }

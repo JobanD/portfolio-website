@@ -37,7 +37,7 @@ export default function Contact() {
                 <Avatar
                   src="/src/assets/github.png"
                   alt="GitHub"
-                  sx={{ bgcolor: "var(--main-purple-color)" }}
+                  sx={{ bgcolor: "var(--main-cream-color)" }}
                   className="github-avatar avatar"
                 />
                 <Typography>Github</Typography>
@@ -51,7 +51,7 @@ export default function Contact() {
                 <Avatar
                   src="/src/assets/linkedin.png"
                   alt="LinkedIn"
-                  sx={{ bgcolor: "var(--main-purple-color)" }}
+                  sx={{ bgcolor: "var(--main-cream-color)" }}
                   className="linkedin-avatar avatar"
                 />
                 <Typography>LinkedIn</Typography>
@@ -62,7 +62,7 @@ export default function Contact() {
                 <Avatar
                   src="/src/assets/resume.png"
                   alt="Resume"
-                  sx={{ bgcolor: "var(--main-purple-color)" }}
+                  sx={{ bgcolor: "var(--main-cream-color)" }}
                   className="resume-avatar avatar"
                 />
                 <Typography>Resume</Typography>
@@ -100,7 +100,6 @@ export default function Contact() {
           <div className="form-element message">
             <label>Message</label>
             <textarea name="message" {...register("message")}></textarea>
-            {/* <input type="textarea" name="message" {...register("message")} /> */}
           </div>
           <button className="submit">Send Message</button>
         </form>

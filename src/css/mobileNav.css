@@ -102,8 +102,16 @@
   position: absolute;
   top: 50%;
   right: 25px;
-  /* transform: translateY(-50%); */
+  /* margin-right: -850px; */
   display: block;
+}
+
+/* So nav button says in top right corner of app rather than screen */
+@media only screen and (min-width: 1800px) {
+  .hamburger {
+    right: 50%;
+    margin-right: -850px;
+  }
 }
 
 .hamburger:hover {
@@ -115,6 +123,10 @@
   width: 100%;
   bottom: 0;
   left: 0;
+}
+
+.socialBox a {
+  color: #fff7eaf0;
 }
 
 .socialBox ul {
