@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 version https://git-lfs.github.com/spec/v1
 oid sha256:6746816f78cb60f04513f7a0f0ef984064af1211ae4daa40e0059b3bd09f19be
 size 433
 =======
+=======
+>>>>>>> b3fa6eef4f306f9547d451b1650b81262edc2efd
 import { SvgIcon } from "@mui/material";
 
 export const FolderIcon = () => {
@@ -19,4 +22,7 @@ export const FolderIcon = () => {
     />
   </SvgIcon>;
 };
+<<<<<<< HEAD
+>>>>>>> b3fa6eef4f306f9547d451b1650b81262edc2efd
+=======
 >>>>>>> b3fa6eef4f306f9547d451b1650b81262edc2efd
