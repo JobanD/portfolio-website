@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b307ae055d0200a21a743ef0c7e8a704cd924fad2ffb60af6b4d6635f1b1624
-size 1169
+import React from "react";
+import "../css/projects.css";
+import ProjectCard from "./ProjectCard";
+import { Typography } from "@mui/material";
+import { Link } from "react-scroll";
+
+export default function Projects() {
+  return (
+    <div className="projects-container" id="projects">
+      <Typography variant="h2">Projects</Typography>
+      <div className="projects-cards-container">
+        <ProjectCard
+          imageSource="/src/assets/basketball-stock.jpg"
+          alt="Preview image of basketball project website"
+          title="Basketball Project"
+          description="This project projects future player statistics for any
+          basketball player in the NBA"
+          webUrl="http://www.google.com/"
+          githubUrl="http://www.google.com/"
+        />
+        <ProjectCard
+          imageSource="/src/assets/basketball-stock.jpg"
+          alt="basketball net"
+          title="Basketball Project"
+          description="This project projects future player statistics for any
+          basketball player in the NBA"
+          webUrl="http://www.google.com/"
+          githubUrl="http://www.google.com/"
+        />
+      </div>
+    </div>
+  );
+}

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23b43c58c7c12e800cc127e0e7c9c11e779a93216339492cb153cb1d18d6cc93
-size 237
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./css/App.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

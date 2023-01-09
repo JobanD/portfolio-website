@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e02bd7d2d36acdd4540f84718b44a379293057c3af5d6da9a83d631bd7d1cc4
-size 159
+.footer-container {
+  background-color: var(--main-charcoal-color);
+  color: #fff7eaf0;
+  width: 100vw;
+  max-width: var(--max-width);
+  align-self: center;
+}

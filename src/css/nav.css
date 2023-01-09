@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2040cbaeeb7ecb0ea2f5b03c571d7190fda23890a13deef10a98729af453294b
-size 345
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.MuiButton-root {
+  min-width: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    flex-wrap: wrap;
+    min-width: fit-content;
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group {
+  justify-content: end;
+}

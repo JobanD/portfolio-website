@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31884d02e08f4e44e8bc5cefbc111338f132e311584976543abd5eadebaedc4d
-size 1511
+import React from "react";
+import { ButtonGroup, Button, Link, Tooltip } from "@mui/material/";
+import { Home, Lightbulb, Build, ContactPage } from "@mui/icons-material";
+import "../css/nav.css";
+import AvatarNav from "./AvatarNav";
+import MobileNav from "./MobileNav";
+import useWindowSize from "../hooks/useWindowSize";
+
+export default function Nav() {
+  const [height, width] = useWindowSize();
+  return width < 60000 ? (
+    <MobileNav />
+  ) : (
+    <header>
+      <div className="nav-container">
+        {/* Custom Component: Turns Avatar in navbar into a button with a drop down menu */}
+        <AvatarNav />
+        <>
+          height: {height}, width: {width}
+        </>
+        <ButtonGroup variant="contained" className="button-group">
+          <Tooltip title="Home">
+            <Button size="small" startIcon={<Home />} href="#">
+              Home
+            </Button>
+          </Tooltip>
+          <Tooltip title="Jump to skills">
+            <Button size="small" startIcon={<Lightbulb />} href="#skills">
+              Skills
+            </Button>
+          </Tooltip>
+          <Tooltip title="Jump to projects">
+            <Button size="small" startIcon={<Build />} href="#projects">
+              Projects
+            </Button>
+          </Tooltip>
+          <Tooltip title="Contact">
+            <Button size="small" startIcon={<ContactPage />} href="#contact">
+              Contact
+            </Button>
+          </Tooltip>
+        </ButtonGroup>
+      </div>
+    </header>
+  );
+}

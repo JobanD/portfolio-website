@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bbb14a016bc3f71c4199054d06e0ccdcb3d4ccc3bb831f524d8dc8ac7fe318dc
-size 884
+import { useState } from "react";
+import "./css/App.css";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import { createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
+
+export default function App() {
+  let theme = createTheme({
+    typography: {
+      fontFamily: [
+        "Merriweather",
+        "Karla",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "sans-serif",
+      ].join(","),
+    },
+  });
+
+  theme = responsiveFontSizes(theme);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <div className="app-container">
+        <Nav />
+        <Home />
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+}

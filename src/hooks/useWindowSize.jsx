@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7a6583a34230460294c3e1cf59f3caa3726c1013deeba59e3613240385ea418
-size 828
+import { useState, useEffect } from "react";
+
+export default function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  const [windowSize, setWindowSize] = useState([
+    window.innerHeight,
+    window.innerWidth,
+  ]);
+  useEffect(() => {
+    // Handler to call on window resize
+    const handleResize = () => {
+      // Set window width/height to state
+      setWindowSize([window.innerHeight, window.innerWidth]);
+    };
+    window.addEventListener("resize", handleResize);
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}

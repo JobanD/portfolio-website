@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b452d9f32d43f2d03e048527ba57ccc45065dbd5b167b42e88ba9c1f7fe39e16
-size 965
+import React, { useState } from "react";
+import Pdf from "../assets/Joban_CV.pdf";
+import {
+  IconButton,
+  Avatar,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Link,
+} from "@mui/material/";
+
+export default function AvatarNav() {
+  return (
+    <div>
+      <Menu id="account-menu">
+        {/* ICONS FOR GITHUB AND LINKED IN FROM icons8 */}
+        <MenuItem
+          component={Link}
+          href="https://github.com/JobanD"
+          target="_blank"
+        >
+          <Avatar src="/src/assets/github.png" alt="GitHub" /> GitHub
+        </MenuItem>
+        <MenuItem
+          component={Link}
+          href="https://www.linkedin.com/in/jobandhindsa/"
+          target="_blank"
+        >
+          <Avatar src="/src/assets/linkedin.png" alt="LinkedIn" /> LinkedIn
+        </MenuItem>
+        <MenuItem component={Link} href={Pdf} target="_blank">
+          <Avatar src="/src/assets/resume.png" alt="Resume" /> Resume
+        </MenuItem>
+      </Menu>
+    </div>
+  );
+}
