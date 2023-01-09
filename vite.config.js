@@ -5,5 +5,13 @@ import svgLoader from "vite-svg-loader";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svgr(), react(), svgLoader()],
+  plugins: [
+    svgr(),
+    react(),
+    svgLoader({
+      svgoConfig: {
+        multipass: true,
+      },
+    }),
+  ],
 });
