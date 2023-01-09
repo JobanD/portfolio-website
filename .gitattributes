@@ -4,10 +4,7 @@
 *.JPEG filter=lfs diff=lfs merge=lfs -text
 *.JPG filter=lfs diff=lfs merge=lfs -text
 *.svg filter=lfs diff=lfs merge=lfs -text
-<<<<<<< HEAD
 *.gitignore filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.lfsconfig filter=lfs diff=lfs merge=lfs -text
 assets/** filter=lfs diff=lfs merge=lfs -text
-=======
->>>>>>> b3fa6eef4f306f9547d451b1650b81262edc2efd
